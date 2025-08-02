@@ -89,7 +89,7 @@ function CustomerLandingPage() {
     if (showPopup) {
       timer = setTimeout(() => {
         setShowPopup(false);
-      }, 5000); // Hide popup after 5 seconds
+      }, 2000); // Hide popup after 5 seconds
     }
     return () => clearTimeout(timer);
   }, [showPopup]);
@@ -205,10 +205,10 @@ function CustomerLandingPage() {
         <div className="clp-product-grid">
           {products.length === 0 && !error && <p>Loading products...</p>}
           {products.map(product => (
-            <Link key={product._id} to={`/product/${product._id}`} className="clp-product-card">
-              <img src={product.image || 'https://via.placeholder.com/150'} alt={product.name} />
-              <h3>{product.name}</h3>
-              <p>₹{product.price.toFixed(2)}</p>
+            <Link key={product?._id || Math.random()} to={`/product/${product?._id || ''}`} className="clp-product-card">
+              <img src={product?.image || 'https://via.placeholder.com/150'} alt={product?.name || 'Unknown Product'} />
+              <h3>{product?.name || 'Unknown Product'}</h3>
+              <p>₹{(product?.price || 0).toFixed(2)}</p>
             </Link>
           ))}
         </div>

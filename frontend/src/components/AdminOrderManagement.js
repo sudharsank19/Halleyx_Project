@@ -57,7 +57,7 @@ function AdminOrderManagement() {
       // Calculate total for each order
       const ordersWithTotal = data.map(order => {
         const total = order.items.reduce((sum, item) => {
-          return sum + (item.product.price * item.quantity);
+          return sum + ((item.product?.price || 0) * item.quantity);
         }, 0);
         return { ...order, total };
       });
@@ -238,11 +238,11 @@ function AdminOrderManagement() {
               </thead>
               <tbody>
                 {selectedOrder.items.map(item => (
-                  <tr key={item.product._id}>
-                    <td>{item.product.name}</td>
+                  <tr key={item.product?._id || item._id || Math.random()}>
+                    <td>{item.product?.name || 'Unknown Product'}</td>
                     <td>
-                      {item.product.image ? (
-                        <img src={item.product.image} alt={item.product.name} className="product-image" />
+                      {item.product?.image ? (
+                        <img src={item.product.image} alt={item.product?.name || 'Unknown Product'} className="product-image" />
                       ) : (
                         'No image'
                       )}
@@ -257,13 +257,13 @@ function AdminOrderManagement() {
                           const newQuantity = parseInt(e.target.value, 10);
                           if (isNaN(newQuantity) || newQuantity < 1) return;
                           const updatedItems = selectedOrder.items.map(i =>
-                            i.product._id === item.product._id ? { ...i, quantity: newQuantity } : i
+                            i.product?._id === item.product?._id ? { ...i, quantity: newQuantity } : i
                           );
                           setSelectedOrder({ ...selectedOrder, items: updatedItems });
                           // Update total in orders list as well
                           const updatedOrders = orders.map(order => {
                             if (order._id === selectedOrder._id) {
-                              const total = updatedItems.reduce((sum, it) => sum + it.product.price * it.quantity, 0);
+                              const total = updatedItems.reduce((sum, it) => sum + (it.product?.price || 0) * it.quantity, 0);
                               return { ...order, items: updatedItems, total };
                             }
                             return order;
@@ -272,8 +272,8 @@ function AdminOrderManagement() {
                         }}
                       />
                     </td>
-                    <td>${item.product.price.toFixed(2)}</td>
-                    <td>${(item.product.price * item.quantity).toFixed(2)}</td>
+                    <td>${(item.product?.price || 0).toFixed(2)}</td>
+                    <td>${((item.product?.price || 0) * item.quantity).toFixed(2)}</td>
                   </tr>
                 ))}
               </tbody>

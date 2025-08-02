@@ -34,8 +34,8 @@ function CustomerOrderManagement() {
   const handleQuantityChange = (productId, quantity) => {
     if (quantity < 1) return;
     const updatedItems = cartItems.map(item =>
-      item.product._id === productId
-        ? { ...item, quantity: Math.min(quantity, item.product.stock_quantity) }
+      item.product?._id === productId
+        ? { ...item, quantity: Math.min(quantity, item.product?.stock_quantity || 0) }
         : item
     );
     setCartItems(updatedItems);
@@ -57,7 +57,7 @@ function CustomerOrderManagement() {
   };
 
   const totalAmount = cartItems.reduce(
-    (sum, item) => sum + item.product.price * item.quantity,
+    (sum, item) => sum + (item.product?.price || 0) * item.quantity,
     0
   );
 
@@ -88,19 +88,19 @@ function CustomerOrderManagement() {
                 <tr><td colSpan="4">Your cart is empty.</td></tr>
               ) : (
                 cartItems.map(item => (
-                  <tr key={item.product._id}>
-                    <td>{item.product.name}</td>
-                    <td>${item.product.price.toFixed(2)}</td>
+                  <tr key={item.product?._id || item._id || Math.random()}>
+                    <td>{item.product?.name || 'Unknown Product'}</td>
+                    <td>${(item.product?.price || 0).toFixed(2)}</td>
                     <td>
                       <input
                         type="number"
                         min="1"
-                        max={item.product.stock_quantity}
+                        max={item.product?.stock_quantity || 0}
                         value={item.quantity}
-                        onChange={e => handleQuantityChange(item.product._id, Number(e.target.value))}
+                        onChange={e => handleQuantityChange(item.product?._id, Number(e.target.value))}
                       />
                     </td>
-                    <td>${(item.product.price * item.quantity).toFixed(2)}</td>
+                    <td>${((item.product?.price || 0) * item.quantity).toFixed(2)}</td>
                   </tr>
                 ))
               )}
@@ -148,7 +148,7 @@ function CustomerOrderManagement() {
                   <div>Order #{order._id} | Date: {new Date(order.date).toLocaleDateString()} | Status: {order.status}</div>
                   <ul>
                     {order.items.map(item => (
-                      <li key={item.product._id}>{item.product.name} x{item.quantity} - ${item.product.price.toFixed(2)}</li>
+                      <li key={item.product?._id || item._id || Math.random()}>{item.product?.name || 'Unknown Product'} x{item.quantity} - ${(item.product?.price || 0).toFixed(2)}</li>
                     ))}
                   </ul>
                   <button onClick={() => handleViewDetails(order)}>View Details</button>
@@ -168,8 +168,8 @@ function CustomerOrderManagement() {
             <h4>Items:</h4>
             <ul>
               {selectedOrder.items.map(item => (
-                <li key={item.product._id}>
-                  {item.product.name} x{item.quantity} - ${item.product.price.toFixed(2)}
+                <li key={item.product?._id || item._id || Math.random()}>
+                  {item.product?.name || 'Unknown Product'} x{item.quantity} - ${(item.product?.price || 0).toFixed(2)}
                 </li>
               ))}
             </ul>

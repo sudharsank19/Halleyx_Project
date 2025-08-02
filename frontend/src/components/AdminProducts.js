@@ -113,18 +113,18 @@ function AdminProducts() {
         </thead>
         <tbody>
           {products.map(product => (
-            <tr key={product._id}>
-              <td>{product._id}</td>
+            <tr key={product?._id || Math.random()}>
+              <td>{product?._id || 'N/A'}</td>
               <td>
-                {product.image ? (
-                  <img src={product.image} alt={product.name} className="product-image" />
+                {product?.image ? (
+                  <img src={product.image} alt={product?.name || 'Unknown Product'} className="product-image" />
                 ) : (
                   <span>No Image</span>
                 )}
               </td>
-              <td>{product.name}</td>
-              <td>{typeof product.price === 'number' ? product.price.toFixed(2) : product.price}</td>
-              <td>{product.stock_quantity}</td>
+              <td>{product?.name || 'Unknown Product'}</td>
+              <td>{typeof product?.price === 'number' ? product.price.toFixed(2) : product?.price || 'N/A'}</td>
+              <td>{product?.stock_quantity || 0}</td>
               <td>
                 <button
                   className="action-button edit-button"
@@ -134,7 +134,7 @@ function AdminProducts() {
                 </button>
                 <button
                   className="action-button delete-button"
-                  onClick={() => handleDelete(product._id)}
+                  onClick={() => handleDelete(product?._id)}
                 >
                   Delete
                 </button>

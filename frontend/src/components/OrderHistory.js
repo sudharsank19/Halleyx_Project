@@ -39,11 +39,11 @@ function OrderHistory() {
               <div>Order #{order._id} | Date: {new Date(order.date).toLocaleDateString()} | Status: {order.status}</div>
               <ul>
                 {order.items.map(item => (
-                  <li key={item.product._id} className="order-item">
-                    <img src={item.product.image || 'https://via.placeholder.com/50'} alt={item.product.name} className="order-item-image" />
-                    <span className="order-item-name">{item.product.name}</span>
+                  <li key={item.product?._id || item._id || Math.random()} className="order-item">
+                    <img src={item.product?.image || 'https://via.placeholder.com/50'} alt={item.product?.name || 'Unknown Product'} className="order-item-image" />
+                    <span className="order-item-name">{item.product?.name || 'Unknown Product'}</span>
                     <span className="order-item-qty">x{item.quantity}</span>
-                    <span className="order-item-price">${item.product.price.toFixed(2)}</span>
+                    <span className="order-item-price">${(item.product?.price || 0).toFixed(2)}</span>
                   </li>
                 ))}
               </ul>
