@@ -14,18 +14,27 @@ A fully functional, full-stack e-commerce web application built with modern tech
 
 ## 🖥️ Demo
 
-> 🚀 **Live Demo**: [halleyx-live.vercel.app](https://halleyx-live.vercel.app)  
-> 🧪 **Admin Panel**: [admin.halleyx.app](https://admin.halleyx.app)
+> 🚀 **Live Demo** 
+> 🧪 **Admin Panel**
 
 ---
 
-## 📷 Screenshots
+## 📚 App Features & Screens
 
-| 🛒 Landing Page | 🧍 Customer Dashboard | 🛍️ Product Page |
-|----------------|------------------------|------------------|
-| ![Landing](https://ibb.co/TB430TXq) | ![Dashboard](https://your-image-url.com/dashboard.png) | ![Product](https://your-image-url.com/product.png) |
-
----
+| 🔸 Feature               | 🔹 Description                                        |
+|-------------------------|--------------------------------------------------------|
+| 🏠 **Landing Page**      | Entry point with welcome, categories, and navigation   |
+| 🔐 **Customer Login**    | Secure login for customers                            |
+| 📝 **Customer Register** | New user registration form                            |
+| 🛡️ **Admin Login**       | Admin panel access                                   |
+| 💻 **Customer Dashboard**| Personalized customer home screen                     |
+| 🛍️ **Product Listings**  | View and filter products by category                  |
+| 🛒 **Cart**              | Add/remove/view cart items                           |
+| 📜 **Order History**     | View previous orders & status                        |
+| 👥 **Customer Management**| Admin: View, edit, delete customer data              |
+| 📋 **Order Management**  | Admin: Track and manage orders                       |
+| 🧰 **Product Management**| Admin: Add/edit/delete products                      |
+| 🎨 **Branding Settings** | Admin: Customize logos, colors, fonts                |
 
 ## 🧩 Features
 
