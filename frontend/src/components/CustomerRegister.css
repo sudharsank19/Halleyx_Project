@@ -1,0 +1,120 @@
+.customer-register-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 1) 0%, #764ba2 100%);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  animation: fadeIn 1s ease forwards;
+}
+
+.customer-register-form {
+  width: 400px;
+  padding: 40px;
+  border-radius: 15px;
+  border: 1px solid #e6e6edff;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 1) 0%, #764ba2 100%);
+  box-shadow: 0 8px 24px #e6e6edff;
+}
+
+.customer-register-form h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 16px;
+  width: 400px;
+}
+
+label {
+  color: white;
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+.input-text {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  background-color: #f8f9ff;
+  color: #333;
+}
+
+/* Focus styling */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  box-shadow: 0 0 4px #fff;
+}
+
+/* Submit Button */
+.customer-register-button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #2874f0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.customer-register-button:hover {
+  background-color: #1a5bb8;
+}
+
+/* Validation and feedback */
+.validation-error,
+.message {
+  color: #ffcccb;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Login link */
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-link a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .customer-register-form {
+    width: 90%;
+    padding: 30px;
+  }
+}

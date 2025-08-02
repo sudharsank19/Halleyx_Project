@@ -1,0 +1,100 @@
+.admin-login-container { 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  color: #fff;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 1) 0%, #764ba2 100%);
+  animation: fadeIn 1s ease forwards;
+}
+
+.admin-login-form {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 1) 0%, #764ba2 100%);
+  padding: 40px;
+  border-radius: 15px;
+  width: 400px;
+  border: 1px solid #e6e6edff;
+  box-shadow: 0 8px 24px #e6e6edff;
+}
+
+.admin-login-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.admin-login-field {
+  margin-bottom: 8px;
+}
+
+.admin-login-field label {
+  color: white;
+  text-decoration: none;
+}
+
+.admin-login-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Remove blue outline on focus */
+.admin-login-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.admin-login-button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #2874f0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.admin-login-button:hover {
+  background-color: #1a5bb8;
+}
+
+.admin-login-message {
+  color: #ffcccb;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Optional animation if needed */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Remove underlines from all links */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}

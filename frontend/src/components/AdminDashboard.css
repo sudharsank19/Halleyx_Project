@@ -1,0 +1,117 @@
+.admin-dashboard {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #5F0F40 0%, #310E68 100%);
+  color: #fff;
+  padding: 40px;
+  animation: fadeIn 1s ease forwards;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.admin-title {
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.logout-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #fff;
+  color: #6a11cb;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.6);
+}
+
+.logout-btn:hover {
+  background-color: #6a11cb;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(106, 17, 203, 0.8);
+}
+
+.admin-summary {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2rem;
+  font-weight: 600;
+  animation: fadeInUp 1s ease forwards;
+  color: var(--color-text-primary);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.summary-card {
+  background: var(--gradient-card);
+  border-radius: 12px;
+  padding: 20px 30px;
+  box-shadow: 0 0 15px var(--color-light-shadow);
+  width: 200px;
+  text-align: center;
+  color: var(--color-text-primary);
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.summary-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: var(--color-primary-brand-blue);
+}
+
+.admin-nav {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #7b68ee;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 10px rgba(123, 104, 238, 0.7);
+}
+
+.nav-btn:hover {
+  background-color: #6a5acd;
+  box-shadow: 0 6px 15px rgba(106, 90, 205, 0.9);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

@@ -1,0 +1,23 @@
+:root {
+  /* Primary Gradients */
+  --gradient-primary: linear-gradient(135deg, #2874f0, #1565c0);
+  --gradient-primary-hover: linear-gradient(135deg, #1565c0, #0d3a7a);
+  --gradient-secondary: #ffe500;
+  --gradient-sidebar: #172337;
+  --gradient-card: #ffffff;
+  --gradient-input: #f1f3f6;
+  --gradient-table-header: linear-gradient(90deg, #172337, #1f2a4d, #172337);
+
+  /* Flat Colors */
+  --color-text-primary: #212121;
+  --color-text-muted: #878787;
+  --color-bg: #ffffff;
+  --color-border: #e0e0e0;
+  --color-success: #388e3c;
+  --color-error: #d32f2f;
+  --color-warning: #ffe500;
+  --color-link: #2874f0;
+
+  /* Shadows */
+  --color-light-shadow: rgba(0, 0, 0, 0.1);
+}

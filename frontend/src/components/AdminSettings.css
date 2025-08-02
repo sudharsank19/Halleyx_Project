@@ -1,0 +1,107 @@
+@import '../styles/variables.css';
+
+.admin-settings {
+  max-width: 700px;
+  margin: 30px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--color-text-primary);
+  background: var(--gradient-card);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.admin-settings h2 {
+  border-bottom: 3px solid var(--gradient-primary);
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--color-text-primary);
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--color-text-primary);
+}
+
+.logo-preview {
+  margin-top: 15px;
+  max-width: 220px;
+  max-height: 120px;
+  border: 1px solid var(--gradient-primary);
+  padding: 8px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+input[type="file"] {
+  display: block;
+}
+
+input[type="color"] {
+  width: 60px;
+  height: 35px;
+  border: none;
+  padding: 0;
+  margin-right: 15px;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+input[type="text"] {
+  width: 120px;
+  padding: 8px 12px;
+  font-size: 1.1rem;
+  vertical-align: middle;
+  border-radius: 6px;
+  border: 1px solid var(--gradient-primary);
+  background: var(--gradient-input);
+  color: var(--color-text-primary);
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: var(--gradient-primary-hover);
+  outline: none;
+}
+
+select {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 1px solid var(--gradient-primary);
+  background: var(--gradient-input);
+  color: var(--color-text-primary);
+  transition: border-color 0.3s ease;
+}
+
+select:focus {
+  border-color: var(--gradient-primary-hover);
+  outline: none;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 1px solid var(--gradient-primary);
+  resize: vertical;
+  background: var(--gradient-input);
+  color: var(--color-text-primary);
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  border-color: var(--gradient-primary-hover);
+  outline: none;
+}

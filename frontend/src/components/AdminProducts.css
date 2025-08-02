@@ -1,0 +1,143 @@
+@import '../styles/variables.css';
+
+.admin-products-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  background: var(--gradient-primary);
+  color: var(--color-text-primary);
+  padding: 40px;
+  animation: fadeIn 1s ease forwards;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.h1{
+  color: white !important;
+}
+.search-input{
+  width: 20% !important;
+  height: 41px;
+}
+.sort-select{
+  width: 20% !important;
+  margin-left: 10px !important;
+}
+
+.admin-products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+  background: var(--gradient-sidebar);
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.admin-products-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-product-button {
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: none;
+  background: var(--gradient-primary);
+  color: var(--color-bg);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px var(--gradient-primary);
+}
+
+.add-product-button:hover {
+  background: var(--gradient-primary-hover);
+  box-shadow: 0 6px 20px var(--gradient-primary-hover);
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0 12px;
+  background: var(--gradient-card);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  color: var(--color-text-primary);
+  animation: fadeInUp 1s ease forwards;
+ 
+}
+
+.products-table th,
+.products-table td {
+  padding: 15px 20px;
+  border-bottom: none;
+  text-align: left;
+  color: var(--color-text-primary);
+  background: var(--gradient-input);
+  border-radius: 10px;
+}
+
+
+.products-table tbody tr:hover {
+  background: var(--gradient-secondary);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.product-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.action-button {
+  margin-right: 12px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: none;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.3s ease;
+}
+
+.edit-button {
+  background: var(--gradient-primary);
+}
+
+.edit-button:hover {
+  background: var(--gradient-primary-hover);
+}
+
+.delete-button {
+  background-color: var(--color-error);
+}
+
+.delete-button:hover {
+  background-color: #d0046f;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
