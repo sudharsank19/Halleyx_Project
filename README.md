@@ -1,4 +1,5 @@
-# 📦 MegaMart E-Commerce Platform
+# 📦 MegaMart E-Commerce Platform                
+>[🚀 **Click Here For Live Demo**](https://youtu.be/811yXAzx4n8)
 
 A fully functional, full-stack e-commerce web application built with modern technologies to deliver an elegant, responsive, and smooth shopping experience. 🌟
 
@@ -12,12 +13,7 @@ A fully functional, full-stack e-commerce web application built with modern tech
 
 ---
 
-## 🖥️ Demo
 
-> 🚀 **Live Demo** 
-> 🧪 **Admin Panel**
-
----
 
 ## 📚 App Features & Screens
 
